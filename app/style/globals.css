@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* header & footer */
+body{@apply bg-gray-700}
+body header{@apply flex md:justify-between  bg-gray-500 text-white font-bold h-10 uppercase md:px-4 shadow-md}
+.title-signup{@apply flex md:items-center}
+body header h1{@apply  md:text-xl}
+h2{@apply  text-sm md:pl-2}
+.pages{@apply flex md:items-center md:px-10 }
+body header h2{@apply mx-4 hover:scale-125 transition ease-out duration-500}
+body footer{@apply mt-2 text-center py-6 bg-gray-500 text-white  font-semibold text-lg }
+
+/* home +fetchblog.js*/
+.contet-page{@apply mx-8 mt-12 }
+.main{@apply mx-2 px-2 my-4 border rounded-2xl w-fit max-w-screen-md min-w-40} 
+.name{@apply relative px-2 mb-1 text-amber-300 }
+.message-createdAt{@apply relative text-white }
+.message{@apply px-2 pb-4 mb-1}
+.createdAt{@apply absolute bottom-0 right-0 text-slate-200 text-sm}
+
+/*form.js*/
+.content-form{@apply mx-2 mt-4 mb-6 }
+.input-name{@apply block border-2 border-white w-60 h-10 mb-2}
+.textarea{@apply block border-2 border-white w-60  h-40 mb-2 }
+.submit{@apply block bg-blue-500 text-white rounded-full px-2 py-1 w-fit hover:bg-gray-500}
